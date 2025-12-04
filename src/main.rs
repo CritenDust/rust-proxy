@@ -15,9 +15,11 @@ use tokio::task;
 mod templates;
 
 // Allowed origins - more permissive for production
-static ALLOWED_ORIGINS: Lazy<[&str; 2]> = Lazy::new(|| [
+static ALLOWED_ORIGINS: Lazy<[&str; 4]> = Lazy::new(|| [
     "http://localhost:5173",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://dev.shiroko.co",
+    "https://shiroko.co"
 ]);
 
 // Reqwest client pool
